@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/45bda80239.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Home Budget</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="my-balance-text">
+                <p>My balance</p>
+                <h1 id="total-money">0</h1>
+                <p id="header-text">Twój balans wynosi zero!</p>
+            </div>
+            <div class="my-balance-logo">     
+                <i id="logo" class="fa-solid fa-piggy-bank fa-3x"></i>  
+            </div>
+        </header>
+        <main>
+            <section class="transactions-container">
+                <div class="transactions-header">
+                    <h1>Income</h1>
+                    <div class="transaction-inputs">
+                        <input id="income-input" type="text" class="text-input" placeholder="Name of income">
+                        <input id="income-amount" type="number" class="amount-input" onkeyup="if(this.value<0){this.value= this.value * -1}" placeholder="Amount" >
+                        <button id ="add-income" class="submit-button">Add</button>
+                    </div>
+                </div>
+                <hr>
+                <div id="income-list" class="transaction-list">
+                </div>
+                <div class="total-month-amount">
+                    <p>Income this month</p>
+                    <h1 id="total-month-income">0 PLN</h1>
+                </div>
+            </section>
+            <section class="transactions-container">
+                <div class="transactions-header">
+                    <h1>Expenses</h1>
+                    <div class="transaction-inputs">
+                        <input id="expense-input" type="text" class="text-input" placeholder="Name of expense" >
+                        <input id="expense-amount" type="number" class="amount-input" onkeyup="if(this.value<0){this.value= this.value * -1}" placeholder="Amount">
+                        <button id="add-expense" class="submit-button">Add</button>
+                    </div>
+                </div>
+                <hr>
+                <div id="expense-list" class="transaction-list">
+                </div>
+                <div class="total-month-amount">
+                    <p>Expenses</p>
+                    <h1 id="total-month-expense">0 PLN</h1>
+                </div>
+            </section>
+        </main>
+    </div>
+   <script src="./app.js"></script>
+</body>
+</html>

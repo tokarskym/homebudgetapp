@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --backgroundBalance: #EC755D; 
+    --backgroundColor: #F8E9DD; 
+    --brown: #382314; 
+    --mediumbrown: #92857A; 
+    --turqouise: #76B5BC; 
+    --white: #FFFF; 
+    --sectionBackground: #FFFBF6;
+    --hoverAddButton: #FF9B86; 
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body {
+    background-color: var(--backgroundColor);
+    font-family: 'DM Sans', sans-serif;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h1 {
+    font-size: 24px; 
+}
+
+hr {
+    width: 303px; 
+    height: 2px; 
+    background-color: #F8E9DD; 
+    border: none; 
+    margin: 0 auto 20px auto; 
+}
+
+header {
+    background-color: var(--backgroundBalance); 
+    border-radius: 10px; 
+    margin: 40px 0 0 0;  
+    width: 343px; 
+    height: 97px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+p {
+    font-size: 14px; 
+}
+
+i {
+    margin-right: 14px; 
+    transform: scale(-1, 1); 
+    color: var(--backgroundColor);  
+}
+
+::placeholder {
+    color: var(--mediumbrown); 
+    opacity: 70%; 
+}
+
+.container {
+    width: 94%; 
+    margin: 0 auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+.my-balance-text {
+    padding: 14px; 
+    color: var(--white); 
+}
+
+div.my-balance-text p {
+    margin-bottom: 4px; 
+}
+
+div.my-balance-text h1 {
+    margin-top: 4px; 
+}
+
+#header-text {
+    display: none; 
+    font-size: 12px; 
+}
+
+section.transactions-container {
+    background-color: var(--sectionBackground); 
+    border-radius: 10px; 
+    width: 343px; 
+    margin: 20px 0; 
+}
+
+div.transactions-header h1 { 
+    color: var(--brown); 
+    padding: 16px 14px; 
+}
+
+div.transaction-inputs {
+    display: flex; 
+    flex-direction: row; 
+}
+
+input.text-input {
+    width: 125px; 
+    height: 33px; 
+    border: 0.5px solid rgba(236, 117, 93, 0.44); 
+    color: #382314;  
+    background-color: var(--backgroundColor); 
+    border-radius: 5px;
+    text-align: center; 
+    margin: 0 5px 20px 15px; 
+    font-size: 12px; 
+}
+
+input.amount-input {
+    width: 88px; 
+    height: 33px;
+    border: 0.5px solid rgba(236, 117, 93, 0.44); 
+    border-radius: 5px; 
+    text-align: center; 
+    margin: 0 5px 20px 5px; 
+    font-size: 12px; 
+    background-color: var(--backgroundColor); 
+}
+
+.submit-button {
+    height: 33px; 
+    width: 78px; 
+    color: var(--white); 
+    background-color: var(--backgroundBalance); 
+    border: none; 
+    border-radius: 5px; 
+    margin: 0 15px 20px 5px; 
+}
+
+.edit-button {
+    border: none; 
+    border-radius: 5px; 
+    background-color: var(--turqouise); 
+    color: var(--white); 
+    margin: 0 15px 3.5px 7px;
+    width: 78px;  
+    height: 25px; 
+}
+
+.delete-button {
+    border: none; 
+    border-radius: 5px; 
+    background-color: var(--turqouise); 
+    color: var(--white); 
+    margin: 3.5px 15px 0 7px;
+    width: 78px; 
+    height: 25px; 
+}
+
+.transaction-name, .transaction-amount {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    border-radius: 5px; 
+    font-size: 12px; 
+    background-color: var(--backgroundColor); 
+    color: var(--brown); 
+}
+
+.transaction-name {
+    width: 125px; 
+    height: 33px; 
+    margin: 0 5px 0 15px; 
+}
+
+.transaction-amount {
+    width: 88px; 
+    height: 33px;
+    margin: 0 5px 0 5px; 
+}
+
+.buttons-box, .total-month-amount {
+    display: flex; 
+    flex-direction: column; 
+}
+
+div.incomes, div.expenses {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+    margin-top: 10px; 
+    margin-bottom: 10px;  
+}
+
+.total-month-amount { 
+    margin: 50px 15px 15px 15px; 
+}
+
+.total-month-amount h1 {
+    font-size: 30px; 
+    color: var(--brown); 
+    margin: 5px 0 20px 0; 
+}
+
+.total-month-amount p {
+    color: var(--mediumbrown); 
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        width: 705px; 
+        margin: 50px 0 0 0; 
+    }
+
+    main {
+        display: flex; 
+    }
+
+    .container {
+        width: 92%; 
+    }
+
+    section.transactions-container {
+        margin: 20px 10px;
+    }
+
+    #header-text {
+        display: initial; 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .submit-button:hover {
+        background-color: #FF9B86; 
+        cursor: pointer; 
+    }
+
+    .edit-button:hover, .delete-button:hover {
+        background-color: #B4E0E5; 
+        cursor: pointer; 
+    }
+}
+
+
