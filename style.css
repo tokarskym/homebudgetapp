@@ -9,6 +9,8 @@
     --white: #FFFF; 
     --sectionBackground: #FFFBF6;
     --hoverAddButton: #FF9B86; 
+    --editDeletehover:  #B4E0E5; 
+    --borderColor:  rgba(236, 117, 93, 0.44); 
 }
 
 * { 
@@ -34,7 +36,7 @@ h1 {
 hr {
     width: 303px; 
     height: 2px; 
-    background-color: #F8E9DD; 
+    background-color: var(--backgroundColor); 
     border: none; 
     margin: 0 auto 20px auto; 
 }
@@ -112,8 +114,8 @@ div.transaction-inputs {
 input.text-input {
     width: 125px; 
     height: 33px; 
-    border: 0.5px solid rgba(236, 117, 93, 0.44); 
-    color: #382314;  
+    border: 0.5px solid var(--borderColor); 
+    color: var(--brown); 
     background-color: var(--backgroundColor); 
     border-radius: 5px;
     text-align: center; 
@@ -124,7 +126,7 @@ input.text-input {
 input.amount-input {
     width: 88px; 
     height: 33px;
-    border: 0.5px solid rgba(236, 117, 93, 0.44); 
+    border: 0.5px solid var(--borderColor); 
     border-radius: 5px; 
     text-align: center; 
     margin: 0 5px 20px 5px; 
@@ -238,12 +240,12 @@ div.incomes, div.expenses {
 
 @media screen and (min-width: 1024px) {
     .submit-button:hover {
-        background-color: #FF9B86; 
+        background-color: var(--hoverAddButton); 
         cursor: pointer; 
     }
 
     .edit-button:hover, .delete-button:hover {
-        background-color: #B4E0E5; 
+        background-color: var(--editDeletehover); 
         cursor: pointer; 
     }
 }
